@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="loadPokemon(currentPokemon)">
+    <div class="center">
+
+    <div id="pokedex">
+        <div id="headline">
+            <img src="img/arrowL.svg" class="backB" onclick="closeOverview()"><img src="img/heart.svg" style="width: 36px; height: 36px;">
+        </div>
+        <div class="topBox">
+            <div class="topBoxL">
+            <h1 id="pokemonName"></h1>
+                <div id="type"></div>
+            </div>
+            <div class="topBoxR" id="number">
+            </div>
+        </div>
+        <div class="pokepix">
+            <img id="image">
+        </div>
+        <div class="bottomBox">
+            <div class="bBH">
+                <p onclick="showbstats()" class="boBoHT isClicked" id="bstats">Basic Stats</p><p onclick="showmoves()" class="boBoHT" id="moves">Moves</p>
+            </div>
+            <div class="infotab" id="itabBS">
+                <div class="itabL">
+                    <p class="space_evenly">Height <span id="height"></span></p> 
+                    <p class="space_evenly">Weight <span id="weight"></span></p>
+                    <p class="space_evenly">Base Experience<span id="bExp"></span></p>
+                </div>
+            </div>
+            <div class="infotab dNone" id="itabM">
+                <div class="itabL">
+                    <p class="space_evenly">Move 1 <span id="move1"></span></p> 
+                    <p class="space_evenly">Move 2 <span id="move2"></span></p>
+                    <p class="space_evenly">Move 3 <span id="move3"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fullscreen" id="fullscreen">
+    <h1 class="hlw">Pokédex</h1>
+    <div id="overview" class="overviewstyle">
+    </div>
+    <button id="loadMoreButton" class="button-62">Mehr Pokemon laden</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

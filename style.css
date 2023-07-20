@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+#pokedex {
+    min-height: 50vh;
+    width: 22.5rem;
+    background-color: rgb(185, 61, 61);
+    color: white;
+    padding: 8px;
+    border-radius: 25px;
+    margin: 64px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+#headline {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 35px;
+}
+
+.topBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.type-bubble {
+    width: fit-content;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-right: 5px;
+    font-size: small;
+    color: white;
+
+}
+
+
+.pokepix {
+    display: flex;
+    margin-bottom: -90px;
+    padding-left: 30px;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin-right: unset;
+}
+
+
+.bBH {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+}
+
+.bottomBox {
+    background-color: white;
+    border-radius: 25px;
+    color: black;
+    width: inherit;
+    margin: 0;
+    padding: 8px;
+    margin-left: -8px;
+    margin-bottom: -10px;
+    max-height: 250px;
+}
+
+.infotab {
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+}
+
+.itabL {
+    width: 250px;
+}
+
+.space_evenly {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boBoHT {
+    font-weight: bold;
+    padding-bottom: 8px;
+    text-decoration: underline rgb(168, 168, 168) 2.5px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 16px;
+}
+
+.boBoHT:hover {
+    cursor: pointer;
+    color: gray;
+
+}
+
+.isClicked {
+    text-decoration: underline rgb(18, 111, 234) 2.5px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 16px;
+}
+
+.dNone {
+    display: none !important;
+}
+
+#move1, #move2, #move3 {
+    width: 24px;
+    height: 24px;
+    white-space: nowrap;;
+}
+
+.center {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.fullscreen {
+    width: 100%;
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+
+.hlw {
+    margin-top: 32px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    color: #EF4765;
+}
+
+
+.overviewstyle {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 16px;
+    background-color: rgb(146, 146, 146);
+    margin-top: 68;
+    max-width: 80vw;
+    width: 75vw;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.overviewelement {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 170px;
+    max-height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+   
+}
+
+
+.overviewelement:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    filter: brightness(120%);
+}
+
+.overviewHL {
+    color: white;
+    margin-top: unset;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+
+.type-container {
+    flex-wrap: nowrap;
+}
+
+.loadMoreButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+
+.backB {
+    width: 36px;
+    height: 36px;
+}
+
+.backB:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+
+.blurry {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
