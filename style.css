@@ -16,8 +16,11 @@ img {
     color: white;
     padding: 8px;
     border-radius: 25px;
-    margin: 64px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
     
 }
 
@@ -131,6 +134,8 @@ img {
     flex-direction: column;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1000;
 }
 
 .fullscreen {
@@ -265,6 +270,123 @@ img {
 
 
 .blurry {
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
+}
+
+#overlay {
+    position: fixed; /* Overlay wird über allen anderen Elementen angezeigt */
+    display: none; /* standardmäßig ausgeblendet */
+    width: 100%; /* volle Breite */
+    height: 100%; /* volle Höhe */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent */
+    z-index: 2; /* liegt über der Übersicht, aber unter der Detailansicht */
+    backdrop-filter: blur(5px); /* Fügt Unschärfe hinzu */
+}
+
+.arrow {
+    position: fixed;
+    top: 50%; /* die Pfeile vertikal zentrieren */
+    transform: translateY(-50%);
+    width: 96px; /* Breite Ihrer Pfeil SVG */
+    height: 96px; /* Höhe Ihrer Pfeil SVG */
+}
+
+.arrow > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#arrow-left {
+    left: 15vw; /* Pfeil links von der pokedex div positionieren. */
+}
+
+#arrow-right {
+    right: 15vw; /* Pfeil rechts von der pokedex div positionieren */
+}
+
+#arrow-left:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+#arrow-right:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+
+@media screen and (max-width: 800px) {
+    #arrow-left {
+        left: 5vw;
+    }
+    #arrow-right {
+        right: 5vw;
+    }
+}
+
+/* Vorschlagsliste für Autocomplete */
+#suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.suggestion-item.highlight,
+.suggestion-item:hover {
+    background-color: #f1f1f1;
+}
+
+.type-filter-button {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.type-filter-button.active {
+    outline: 3px solid white;
+    transform: scale(1.05);
+}
+
+.type-filter-reset {
+    margin: 8px;
+    padding: 6px 12px;
+    font-weight: bold;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
 }
